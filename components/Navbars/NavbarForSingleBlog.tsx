@@ -1,9 +1,8 @@
 import { UserButton } from "@clerk/nextjs";
-import Link from "next/link";
-import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
-const NavbarForBlogPages = ({ user }: { user: User | null }) => {
+const NavbarForSingleBlog = ({ user }: { user: User | null }) => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full  flex flex-col">
       <nav className="flex flex-wrap items-center justify-between mt-4 opacity-90 hover:opacity-100">
@@ -48,4 +47,4 @@ const NavbarForBlogPages = ({ user }: { user: User | null }) => {
   );
 };
 
-export default NavbarForBlogPages;
+export default NavbarForSingleBlog;

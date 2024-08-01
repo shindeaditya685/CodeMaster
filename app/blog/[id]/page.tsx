@@ -3,6 +3,7 @@ import SingleBlog from "@/components/BlogPage/SingleBlog";
 import { currentUser } from "@clerk/nextjs/server";
 import { fetchByBlogIdAction } from "@/actions/blogPostAction";
 import { parseStringfy } from "@/lib/supportFunctions";
+import NavbarForSingleBlog from "@/components/Navbars/NavbarForSingleBlog";
 
 interface BlogPageProps {
   params: {
@@ -25,7 +26,7 @@ const BlogPage = async ({ params: { id } }: BlogPageProps) => {
 
   return (
     <>
-      <NavbarForBlogPages />
+      <NavbarForSingleBlog user={user} />
       <SingleBlog blog={blog} user={JSON.parse(JSON.stringify(user))} />
     </>
   );
