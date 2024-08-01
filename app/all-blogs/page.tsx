@@ -13,13 +13,17 @@ const CreateBlog = async () => {
 
   const fetchedBlogs = await fetchAllBlogsAction("/all-blogs");
 
+  const sortedBlogs = fetchedBlogs.sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
+
   return (
     <>
       <NavbarForBlogPages user={user} />
       <section className="p-8 bg-gray-900 min-h-screen">
-        {fetchedBlogs && fetchedBlogs.length > 0 ? (
+        {sortedBlogs && sortedBlogs.length > 0 ? (
           <BlogsShow
-            blogs={parseStringfy(fetchedBlogs)}
+            blogs={parseStringfy(sortedBlogs)}
             blogHeading="Dive into All Coding Blogs 🏊‍♂️"
           />
         ) : (

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
 import { truncateText } from "@/lib/supportFunctions";
+import ReactTimeAgo from "./Time-Ago/ReactTimeAgo";
 
 const BlogsShow = ({
   blogs,
@@ -50,6 +51,11 @@ const BlogsShow = ({
                       {tag}
                     </span>
                   ))}
+                  <div>
+                    <span className="ml-2 text-sm text-gray-300">
+                      {<ReactTimeAgo createdAt={blog.createdAt.toString()} />}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -125,7 +125,7 @@ export function BlogFormOwn({
         className="space-y-8 font-sans"
       >
         <section className="mb-12 pt-6">
-          <h1 className="header">Building Your Dev Diary! 📚</h1>
+          <h1 className="header text-center">Building Your Dev Diary! 📚</h1>
         </section>
         <FormField
           control={form.control}
@@ -205,7 +205,7 @@ export function BlogFormOwn({
                   <Button
                     type="button"
                     onClick={handleAddTag}
-                    className="border-l rounded-none h-11 bg-blue-700 text-white"
+                    className="shad-primary-btn h-11 rounded-l-none"
                   >
                     Add Tag
                   </Button>
@@ -339,7 +339,7 @@ export function BlogFormOwn({
             </TabsContent>
           </Tabs>
         </div>
-        <SubmitButton isLoading={isLoading} />
+        <SubmitButton isLoading={isLoading}>Submit</SubmitButton>
       </form>
     </Form>
   );
