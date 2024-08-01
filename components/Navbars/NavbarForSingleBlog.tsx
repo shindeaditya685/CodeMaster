@@ -1,13 +1,20 @@
 import { UserButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const NavbarForSingleBlog = ({ user }: { user: User | null }) => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full  flex flex-col">
       <nav className="flex flex-wrap items-center justify-between mt-4 opacity-90 hover:opacity-100">
-        <Link href={"/"} className="text-xl sm:text-2xl font-bold">
-          CodeMaster
+        <Link href={"/all-blogs"} className="text-xl sm:text-2xl font-bold">
+          {/* CodeMaster */}
+          <Image
+            src={"/assets/back.png"}
+            alt="back-button"
+            width={30}
+            height={30}
+          />
         </Link>
         <div className="flex gap-3 sm:gap-8 items-center mt-4 sm:mt-0">
           <Button asChild>
