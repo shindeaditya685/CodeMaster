@@ -1,4 +1,3 @@
-import NavbarForBlogPages from "@/components/Navbars/NavbarForBlogPages";
 import SingleBlog from "@/components/BlogPage/SingleBlog";
 import { currentUser } from "@clerk/nextjs/server";
 import { fetchByBlogIdAction } from "@/actions/blogPostAction";

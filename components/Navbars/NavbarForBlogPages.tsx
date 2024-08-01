@@ -1,15 +1,37 @@
+"use client";
+
 import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 
-const NavbarForBlogPages = ({ user }: { user: User | null }) => {
+const NavbarForBlogPages = ({
+  user,
+  handleSearch,
+}: {
+  user: User | null;
+  handleSearch: (query: string) => void;
+}) => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full  flex flex-col">
-      <nav className="flex flex-wrap items-center justify-between mt-4 opacity-90 hover:opacity-100">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col">
+      <nav className="flex flex-wrap items-center justify-between mt-4 gap-4">
         <Link href={"/"} className="text-xl sm:text-2xl font-bold">
           CodeMaster
         </Link>
+        <div className="flex flex-1 max-w-2xl">
+          <Input
+            placeholder="search blog here...."
+            className="shad-input border-0 flex-1"
+            onChange={(e) => handleSearch(e.target.value)}
+          />
+          <Button
+            type="button"
+            className="shad-primary-btn h-11 rounded-l-none"
+          >
+            search
+          </Button>
+        </div>
         <div className="flex gap-3 sm:gap-8 items-center mt-4 sm:mt-0">
           <Button asChild>
             <Link

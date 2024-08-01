@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import NavbarForBlogPages from "@/components/Navbars/NavbarForBlogPages";
 import { fetchAllBlogsAction } from "@/actions/blogPostAction";
 import { parseStringfy } from "@/lib/supportFunctions";
+import AllBlogsPage from "@/components/All-Blogs-Page/AllBlogsPage";
 
 const CreateBlog = async () => {
   const user = await currentUser();
@@ -14,28 +15,11 @@ const CreateBlog = async () => {
   const fetchedBlogs = await fetchAllBlogsAction("/all-blogs");
 
   const sortedBlogs = fetchedBlogs.sort(
-    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    (a: any, b: any) =>
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   );
 
-  return (
-    <>
-      <NavbarForBlogPages user={user} />
-      <section className="p-8 bg-gray-900 min-h-screen">
-        {sortedBlogs && sortedBlogs.length > 0 ? (
-          <BlogsShow
-            blogs={parseStringfy(sortedBlogs)}
-            blogHeading="Dive into All Coding Blogs 🏊‍♂️"
-          />
-        ) : (
-          <div className="container mx-auto">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              No blogs available.
-            </h1>
-          </div>
-        )}
-      </section>
-    </>
-  );
+  return <AllBlogsPage user={parseStringfy(user)} sortedBlogs={sortedBlogs} />;
 };
 
 export default CreateBlog;
