@@ -35,11 +35,11 @@ const AllBlogsPage = ({
   return (
     <>
       <NavbarForBlogPages user={user} handleSearch={handleSearch} />
-      <section className="p-8 bg-gray-900 min-h-screen">
+      <section className="py-8 bg-gray-900 min-h-screen">
         {filteredBlogs && filteredBlogs.length > 0 ? (
           <BlogsShow
             blogs={parseStringfy(filteredBlogs)}
-            blogHeading="Dive into All Coding Blogs 🏊‍♂️"
+            blogHeading="Navigate Through Coding Knowledge 🧭"
           />
         ) : (
           <div className="container mx-auto">
