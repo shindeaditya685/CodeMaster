@@ -8,7 +8,7 @@ const Delete = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.7}
       stroke="currentColor"
-      className="size-5"
+      className="size-5 text-red-500"
     >
       <path
         strokeLinecap="round"

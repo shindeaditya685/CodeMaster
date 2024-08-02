@@ -187,7 +187,7 @@
   }
 
   .shad-common-text {
-    @apply text-sm font-bold
+    @apply text-sm font-bold;
   }
 
   .shad-danger-btn {
@@ -199,7 +199,7 @@
   }
 
   .shad-input-label {
-    @apply text-14-medium text-dark-700 !important;
+    @apply text-xl text-dark-700 !important;
   }
 
   .shad-input {

@@ -78,7 +78,7 @@ const CreateBlog = async () => {
         </nav>
         <div className="border-b mt-4 opacity-70" />
       </div>
-      <div className="container mx-auto w-[70%]">
+      <div className="container mx-auto  w-[100%]">
         <BlogFormOwn user={parseStringfy(user)} />
       </div>
     </div>

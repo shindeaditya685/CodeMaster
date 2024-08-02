@@ -32,7 +32,7 @@ const BlogsShow = ({
               key={blog._id}
               onClick={() => handleClick(blog._id)}
               className="bg-gray-800 cursor-pointer shadow-lg rounded-lg overflow-hidden mb-6"
-              style={{ height: "250px" }} // Adjust the height as needed
+              style={{ height: "250px" }} 
             >
               <div className="p-6 h-full flex flex-col">
                 <h1 className="md:text-2xl text-xl font-bold mb-2 text-white">

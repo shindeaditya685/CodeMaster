@@ -31,7 +31,7 @@ export function BlogFormOwn({
 }: {
   id?: string;
   user: User | null;
-  blog: BlogType;
+  blog?: BlogType;
 }) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -122,7 +122,7 @@ export function BlogFormOwn({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 font-sans"
+        className="space-y-8  font-sans"
       >
         <section className="mb-12 pt-6">
           <h1 className="header text-center">Building Your Dev Diary! 📚</h1>
@@ -132,7 +132,7 @@ export function BlogFormOwn({
           name="title"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="">Title</FormLabel>
+              <FormLabel className="shad-input-label">Title</FormLabel>
               <FormControl>
                 <div className="flex rounded-md border border-dark-500 bg-dark-400">
                   <Input
@@ -151,7 +151,7 @@ export function BlogFormOwn({
           name="description"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="">Description</FormLabel>
+              <FormLabel className="shad-input-label">Description</FormLabel>
               <FormControl>
                 <div className="flex rounded-md border border-dark-500 bg-dark-400">
                   <Textarea
@@ -193,7 +193,7 @@ export function BlogFormOwn({
                   ))}
                 </div>
               </div>
-              <FormLabel>Tags</FormLabel>
+              <FormLabel className="shad-input-label">Tags</FormLabel>
               <FormControl>
                 <div className="flex rounded-md border border-dark-500 bg-dark-400">
                   <Input
