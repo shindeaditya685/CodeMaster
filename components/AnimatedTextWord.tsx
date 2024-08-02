@@ -3,7 +3,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const AnimatedTextWord = ({ text }: { text: string }) => {
+const AnimatedTextWord = ({
+  text,
+  className,
+}: {
+  text: string;
+  className: string;
+}) => {
   const words = text.split(" ");
 
   // Variants for Container of words.
@@ -16,7 +22,6 @@ const AnimatedTextWord = ({ text }: { text: string }) => {
   };
 
   // Variants for each word.
-
   const child = {
     visible: {
       opacity: 1,
@@ -40,11 +45,10 @@ const AnimatedTextWord = ({ text }: { text: string }) => {
 
   return (
     <motion.div
+      className={className}
       style={{
         overflow: "hidden",
-        display: "flex",
-        fontSize: "4rem",
-        fontWeight: "700",
+        display: "flex text-center",
       }}
       variants={container}
       initial="hidden"
