@@ -25,7 +25,7 @@ const BlogPage = async ({ params: { id } }: BlogPageProps) => {
 
   return (
     <>
-      <NavbarForSingleBlog user={user} />
+      <NavbarForSingleBlog user={parseStringfy(user)} />
       <SingleBlog blog={blog} user={JSON.parse(JSON.stringify(user))} />
     </>
   );
