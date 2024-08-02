@@ -4,17 +4,11 @@ import Link from "next/link";
 import React from "react";
 import AnimatedTextWord from "./AnimatedTextWord";
 import { Button } from "./ui/button";
-import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <section className="flex items-center justify-center w-full h-full bg-gradient-to-r from-blue-700 to-purple-800 text-white px-4 sm:px-6 lg:px-8">
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="relative z-10 max-w-4xl w-full mx-auto text-center"
-      >
+      <div className="relative z-10 max-w-4xl w-full mx-auto text-center">
         <AnimatedTextWord
           text="Solve. Code. Learn."
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
@@ -30,15 +24,7 @@ const Hero = () => {
             Begin Your Coding Journey &rarr;
           </Link>
         </Button>
-      </motion.div>
-      {/* <motion.div
-        initial={{ opacity: 0, scale: 1.2 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className="absolute inset-0 z-0"
-      >
-        <div className="absolute inset-0 bg-[url('/assets/hero-background.png')] bg-cover bg-center filter blur-sm"></div>
-      </motion.div> */}
+      </div>
     </section>
   );
 };

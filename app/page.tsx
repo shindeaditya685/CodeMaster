@@ -72,17 +72,17 @@ export default async function Home() {
           <DropdownMenuTrigger>
             <Menubar />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-[200px] flex flex-col items-center bg-white text-black">
+          <DropdownMenuContent className="w-[200px] flex flex-col items-center bg-gray-800 text-white shadow-lg rounded-lg">
             <DropdownMenuLabel>
               <div className="rounded-full shadow-md">
                 <UserButton />
               </div>
             </DropdownMenuLabel>
-            <DropdownMenuSeparator />
+            <DropdownMenuSeparator className="border-gray-600" />
             <DropdownMenuItem>
               <Link
                 href="/all-blogs"
-                className="hover:underline underline-offset-1"
+                className="hover:bg-gray-700 w-full text-center py-2  px-2 rounded-lg"
               >
                 Explore Blog&apos;s
               </Link>
@@ -91,7 +91,7 @@ export default async function Home() {
               <DropdownMenuItem>
                 <Link
                   href="/create-blog"
-                  className="hover:underline underline-offset-1"
+                  className="hover:bg-gray-700 w-full text-center py-2  px-2 rounded-lg"
                 >
                   Start a Blog
                 </Link>
@@ -101,7 +101,7 @@ export default async function Home() {
               <DropdownMenuItem>
                 <Link
                   href="/profile"
-                  className="hover:underline underline-offset-1"
+                  className="hover:bg-gray-700 w-full text-center py-2 px-2 rounded-lg"
                 >
                   View Profile
                 </Link>
@@ -111,7 +111,7 @@ export default async function Home() {
               <DropdownMenuItem>
                 <Link
                   href="/sign-in"
-                  className="hover:underline underline-offset-1"
+                  className="hover:bg-gray-700 w-full text-center py-2 rounded-lg"
                 >
                   Sign-in
                 </Link>

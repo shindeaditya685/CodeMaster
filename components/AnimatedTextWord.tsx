@@ -48,7 +48,8 @@ const AnimatedTextWord = ({
       className={className}
       style={{
         overflow: "hidden",
-        display: "flex text-center",
+        display: "flex",
+        justifyContent: "center", // Centering the text
       }}
       variants={container}
       initial="hidden"
