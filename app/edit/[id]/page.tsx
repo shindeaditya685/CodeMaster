@@ -13,7 +13,7 @@ const Edit = async ({ params: { id } }: BlogPageProps) => {
   return (
     <div className="w-full">
       <NavbarForProfile />
-      <div className="container mx-auto w-[70%]">
+      <div className="container mx-auto ">
         {/* <BlogForm /> */}
         <BlogFormOwn id={id} blog={blog} user={parseStringfy(user)} />
       </div>
